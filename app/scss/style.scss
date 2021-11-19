@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -112,6 +113,157 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	}
+}
+
+.top-slider {
+
+	&__bg {
+		background-image: url(../images/top-slider-bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+	}
+	
+	&__inner {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding-top: 225px;
+	}
+
+	&__item {
+		display: flex !important;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+
+	&__content {
+		max-width: 470px;
+	}
+
+	&__title {
+		@extend %rubik-500;
+		font-size: 72px;
+		color: $accent-dark;
+		margin-bottom: 45px;
+	}
+
+	&__text {
+		max-width: 370px;
+		@extend %rubik-400;
+		font-size: 18px;
+		line-height: 30px;
+		color: $accent-light;
+		margin-bottom: 41px;
+	}
+
+	&__btn {
+		display: inline-block;
+		@extend %rubik-500;
+		font-size: 15px;
+		line-height: 12px;
+		color: #fff;
+		background-color: $light-blue;
+		padding: 25px 100px 21px 27px;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			background-image: url(../images/icons/arrow-btn.svg);
+			width: 22px;
+			height: 9px;
+			top: 26px;
+			right: 19px;
+		}
+	}
+
+	.slick-dots {
+		display: flex;
+		justify-content: center;
+		margin-top: 207px;
+		padding-bottom: 45px;
+		li {
+			margin: 0 5px;
+			button {
+				border: none;
+				padding: 0;
+				@extend %rubik-500;
+				font-size: 11px;
+				line-height: 8px;
+				color: $accent-light;
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background-color: #fee4cd;
+				cursor: pointer;
+			}
+			&.slick-active {
+				button {
+					background-color: #fff;
+					color: $accent-dark;
+				}
+			}
+		}
+	}
+
+	&__descr {
+		background-color: #fef7f0;
+		padding: 47px 0 49px;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__descr-item {
+		max-width: 300px;
+		padding-left: 77px;
+		position: relative;
+	}
+
+	&__descr-title {
+		@extend %dmsans-700;
+		font-size: 18px;
+		line-height: 40px;
+		color: #414141;
+	}
+
+	&__descr-text {
+		@extend %dmsans-400;
+		font-size: 16px;
+		line-height: 30px;
+		color: #585858;
+	}
+
+	&__descr-item--support::before {
+		content: '';
+		position: absolute;
+		background-image: url(../images/icons/support.svg);
+		background-repeat: no-repeat;
+		top: 10px;
+		left: 0;
+		width: 51px;
+		height: 53px;
+	}
+
+	&__descr-item--delivery::before {
+		content: '';
+		position: absolute;
+		background-image: url(../images/icons/delivery.svg);
+		background-repeat: no-repeat;
+		top: 10px;
+		left: 0;
+		width: 54px;
+		height: 36px;
+	}
+
+	&__descr-item--payment::before {
+		content: '';
+		position: absolute;
+		background-image: url(../images/icons/payment.svg);
+		background-repeat: no-repeat;
+		top: 10px;
+		left: 0;
+		width: 54px;
+		height: 52px;
 	}
 }
 
