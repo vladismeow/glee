@@ -118,7 +118,7 @@
 
 .top-slider {
 
-	&__bg {
+	&__slider {
 		background-image: url(../images/top-slider-bg.png);
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -126,7 +126,7 @@
 	}
 	
 	&__inner {
-		max-width: 1200px;
+		max-width: 1170px;
 		margin: 0 auto;
 		padding-top: 225px;
 	}
@@ -209,6 +209,9 @@
 	&__descr {
 		background-color: #fef7f0;
 		padding: 47px 0 49px;
+	}
+
+	&__descr-inner {
 		display: flex;
 		justify-content: space-around;
 	}
@@ -267,11 +270,64 @@
 	}
 }
 
+.products {
+	padding: 75px 0 185px;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	&__btns {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 80px;
+	}
+
+	&__btn + .products__btn {
+		margin-left: 30px;
+	}
+
+	&__btn {
+		border: none;
+		padding: 0;
+		background-color: transparent;
+		cursor: pointer;
+		@extend %dmsans-700;
+		font-size: 16px;
+		color: #8b8b8b;
+	}
+
+	&__items {
+	}
+
+	&__item {
+		padding: 24px 42px 40px;
+		max-width: 270px;
+	}
+
+	&__item-img {
+		margin-bottom: 80px;
+	}
+
+	&__item-title {
+		text-align: center;
+		@extend %dmsans-500;
+		font-size: 16px;
+		color: $accent-dark;
+		margin-bottom: 17px;
+	}
+
+	&__item-price {
+		text-align: center;
+		@extend %dmsans-700;
+		font-size: 16px;
+		color: $accent-light;
+	}
+}
 
 .footer {
 	color: #7b7b7b;
-	max-width: 1200px;
-	margin: 0 auto;
 	
 	&__top {
 		padding: 80px 0 70px;
