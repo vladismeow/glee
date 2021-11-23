@@ -4,8 +4,6 @@ $(function () {
 		arrows: false
 	})
 
-	$(".video__link").YouTubePopUp();
-
 	var containerEl1 = document.querySelector('[data-ref="products"]');
 	var containerEl2 = document.querySelector('[data-ref="design"]');
 
